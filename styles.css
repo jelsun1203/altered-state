@@ -177,9 +177,9 @@ ul {
 }
 
 .logo-img {
-  height: 42px;
+  height: 50px;
   width: auto;
-  filter: brightness(0) invert(1);
+  /* logo displays as-is on dark background */
 }
 
 .main-nav {
@@ -508,7 +508,7 @@ ul {
 
 .mobile-logo {
   height: 36px;
-  filter: brightness(0) invert(1);
+  /* logo displays as-is on dark background */
 }
 
 .mobile-nav-close {
@@ -1169,7 +1169,7 @@ ul {
 
 .footer-logo {
   height: 40px;
-  filter: brightness(0) invert(1);
+  /* logo displays as-is on dark background */
   margin-bottom: 16px;
 }
 
