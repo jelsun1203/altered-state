@@ -1452,17 +1452,28 @@ ul {
   opacity: 0.7;
 }
 
-/* Logo text fallback */
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  flex-shrink: 0;
+}
+
 .logo-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: var(--tracking);
   color: var(--white);
-  align-items: center;
   white-space: nowrap;
 }
 
-.footer-logo-text {
-  font-size: 1rem;
+.footer-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 16px;
 }
