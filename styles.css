@@ -177,9 +177,8 @@ ul {
 }
 
 .logo-img {
-  height: 50px;
+  height: 55px;
   width: auto;
-  /* logo displays as-is on dark background */
 }
 
 .main-nav {
@@ -1453,27 +1452,3 @@ ul {
 }
 
 /* Logo styles */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-icon {
-  flex-shrink: 0;
-}
-
-.logo-text {
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: var(--tracking);
-  color: var(--white);
-  white-space: nowrap;
-}
-
-.footer-logo-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
-}
