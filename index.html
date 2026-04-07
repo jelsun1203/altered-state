@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALTERED STATE | Streetwear Redefined</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>FREE SHIPPING ON ORDERS OVER $150 &mdash; <a href="#shop">SHOP NOW</a></p>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="./" class="logo">
+        <img src="images/logo.png" alt="Altered State" class="logo-img"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <span class="logo-text" style="display:none;">ALTERED STATE</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#" class="nav-link active">HOME</a></li>
+          <li><a href="#shop" class="nav-link">SHOP ALL</a></li>
+          <li><a href="#new" class="nav-link">NEW ARRIVALS</a></li>
+          <li><a href="#collections" class="nav-link">COLLECTIONS</a></li>
+          <li><a href="#lookbook" class="nav-link">LOOKBOOK</a></li>
+          <li><a href="#about" class="nav-link">ABOUT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-btn" id="searchToggle" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+        <a href="#account" class="icon-btn" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+        <button class="icon-btn cart-btn" id="cartToggle" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <input type="text" placeholder="SEARCH ALTERED STATE..." class="search-input" id="searchInput">
+      <button class="search-close" id="searchClose" aria-label="Close search">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>YOUR CART</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-body">
+      <div class="cart-empty">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <p>YOUR CART IS EMPTY</p>
+        <a href="#shop" class="btn btn-primary">START SHOPPING</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <img src="images/logo.png" alt="Altered State" class="mobile-logo"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <span class="logo-text" style="display:none;">ALTERED STATE</span>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#shop">SHOP ALL</a></li>
+      <li><a href="#new">NEW ARRIVALS</a></li>
+      <li><a href="#collections">COLLECTIONS</a></li>
+      <li><a href="#lookbook">LOOKBOOK</a></li>
+      <li><a href="#about">ABOUT</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <a href="#account">MY ACCOUNT</a>
+      <a href="#">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://design.canva.ai/kroSB24POGbUk2i" alt="Altered State Campaign" class="hero-bg-img">
+      <div class="hero-gradient"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-tag">SS26 COLLECTION</span>
+      <h1 class="hero-title">ALTER<br>YOUR<br>REALITY</h1>
+      <p class="hero-subtitle">Premium streetwear for those who refuse to conform.</p>
+      <div class="hero-actions">
+        <a href="#shop" class="btn btn-primary btn-lg">SHOP THE DROP</a>
+        <a href="#lookbook" class="btn btn-outline btn-lg">VIEW LOOKBOOK</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>ALTERED STATE</span>
+      <span>&bull;</span>
+      <span>NEW ARRIVALS</span>
+      <span>&bull;</span>
+      <span>FREE SHIPPING OVER $150</span>
+      <span>&bull;</span>
+      <span>STREETWEAR REDEFINED</span>
+      <span>&bull;</span>
+      <span>ALTERED STATE</span>
+      <span>&bull;</span>
+      <span>NEW ARRIVALS</span>
+      <span>&bull;</span>
+      <span>FREE SHIPPING OVER $150</span>
+      <span>&bull;</span>
+      <span>STREETWEAR REDEFINED</span>
+      <span>&bull;</span>
+      <span>ALTERED STATE</span>
+      <span>&bull;</span>
+      <span>NEW ARRIVALS</span>
+      <span>&bull;</span>
+      <span>FREE SHIPPING OVER $150</span>
+      <span>&bull;</span>
+      <span>STREETWEAR REDEFINED</span>
+      <span>&bull;</span>
+    </div>
+  </div>
+
+  <!-- New Arrivals -->
+  <section class="section" id="new">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">NEW ARRIVALS</h2>
+        <a href="#shop" class="section-link">VIEW ALL <span>&rarr;</span></a>
+      </div>
+      <div class="product-grid">
+        <!-- Product 1: Phantom Oversized Tee -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://design.canva.ai/jtyDgC4gaD1R0EO" alt="Phantom Oversized Tee" class="product-img">
+            <span class="product-badge">NEW</span>
+            <div class="product-actions-overlay">
+              <button class="btn btn-primary btn-sm add-to-cart">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">PHANTOM OVERSIZED TEE</h3>
+            <p class="product-price">$68.00</p>
+          </div>
+        </div>
+        <!-- Product 2: Void Cargo Pants -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://design.canva.ai/XqTSwmFo2d_MqAc" alt="Void Cargo Pants" class="product-img">
+            <span class="product-badge">NEW</span>
+            <div class="product-actions-overlay">
+              <button class="btn btn-primary btn-sm add-to-cart">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">VOID CARGO PANTS</h3>
+            <p class="product-price">$128.00</p>
+          </div>
+        </div>
+        <!-- Product 3: Distortion Hoodie -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://design.canva.ai/CQXcK0Vz0jy6CP4" alt="Distortion Hoodie" class="product-img">
+            <span class="product-badge sale">SALE</span>
+            <div class="product-actions-overlay">
+              <button class="btn btn-primary btn-sm add-to-cart">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">DISTORTION HOODIE</h3>
+            <p class="product-price"><span class="price-old">$145.00</span> $98.00</p>
+          </div>
+        </div>
+        <!-- Product 4: Static Crewneck -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://design.canva.ai/guX79pDW0ze2dEa" alt="Static Crewneck" class="product-img">
+            <span class="product-badge">NEW</span>
+            <div class="product-actions-overlay">
+              <button class="btn btn-primary btn-sm add-to-cart">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">STATIC CREWNECK</h3>
+            <p class="product-price">$88.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Split Feature -->
+  <section class="split-feature">
+    <div class="split-left">
+      <img src="https://design.canva.ai/JU3Je6rM0fDBWmr" alt="Altered State Lifestyle" class="split-img">
+    </div>
+    <div class="split-right">
+      <div class="split-content">
+        <span class="split-tag">THE VISION</span>
+        <h2 class="split-title">BORN FROM<br>THE UNDERGROUND</h2>
+        <p class="split-text">Altered State isn't just clothing &mdash; it's a movement. Every piece is designed for those who challenge the norm, break boundaries, and live on their own terms. Crafted with premium materials and an uncompromising attention to detail.</p>
+        <a href="#about" class="btn btn-outline">OUR STORY</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections Grid -->
+  <section class="section" id="collections">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">COLLECTIONS</h2>
+      </div>
+      <div class="collections-grid">
+        <a href="#" class="collection-card collection-large">
+          <img src="https://design.canva.ai/LSIJ66CHdZQJ7hw" alt="Essentials Collection" class="collection-img">
+          <div class="collection-overlay">
+            <h3>ESSENTIALS</h3>
+            <span>SHOP NOW &rarr;</span>
+          </div>
+        </a>
+        <a href="#" class="collection-card">
+          <img src="https://design.canva.ai/r9u70UJ5KP2RPyJ" alt="Outerwear Collection" class="collection-img">
+          <div class="collection-overlay">
+            <h3>OUTERWEAR</h3>
+            <span>SHOP NOW &rarr;</span>
+          </div>
+        </a>
+        <a href="#" class="collection-card">
+          <img src="https://design.canva.ai/BTjXk3Cln6v5Flu" alt="Accessories Collection" class="collection-img">
+          <div class="collection-overlay">
+            <h3>ACCESSORIES</h3>
+            <span>SHOP NOW &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lookbook Banner -->
+  <section class="lookbook-banner" id="lookbook">
+    <div class="lookbook-bg">
+      <img src="https://design.canva.ai/A8KL1zMSnCCBQhh" alt="Lookbook" class="lookbook-bg-img">
+    </div>
+    <div class="lookbook-content">
+      <span class="lookbook-tag">SS26</span>
+      <h2 class="lookbook-title">THE LOOKBOOK</h2>
+      <p class="lookbook-text">See the full collection styled and shot on location.</p>
+      <a href="#" class="btn btn-primary btn-lg">EXPLORE</a>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section class="section" id="shop">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">BEST SELLERS</h2>
+        <a href="#shop" class="section-link">VIEW ALL <span>&rarr;</span></a>
+      </div>
+      <div class="product-grid">
+        <!-- Product 5: Signal Graphic Tee -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://design.canva.ai/xs9TMg1mHK1lhsP" alt="Signal Graphic Tee" class="product-img">
+            <div class="product-actions-overlay">
+              <button class="btn btn-primary btn-sm add-to-cart">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">SIGNAL GRAPHIC TEE</h3>
+            <p class="product-price">$58.00</p>
+          </div>
+        </div>
+        <!-- Product 6: Monolith Track Pants -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://design.canva.ai/Kr30SwJmNRPV2bd" alt="Monolith Track Pants" class="product-img">
+            <div class="product-actions-overlay">
+              <button class="btn btn-primary btn-sm add-to-cart">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">MONOLITH TRACK PANTS</h3>
+            <p class="product-price">$118.00</p>
+          </div>
+        </div>
+        <!-- Product 7: Fracture Zip Hoodie -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://design.canva.ai/wAfVOkCZRnKwRMZ" alt="Fracture Zip Hoodie" class="product-img">
+            <div class="product-actions-overlay">
+              <button class="btn btn-primary btn-sm add-to-cart">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">FRACTURE ZIP HOODIE</h3>
+            <p class="product-price">$155.00</p>
+          </div>
+        </div>
+        <!-- Product 8: Glitch Beanie -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://design.canva.ai/G6ZNECzNb_IAcrU" alt="Glitch Beanie" class="product-img">
+            <div class="product-actions-overlay">
+              <button class="btn btn-primary btn-sm add-to-cart">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">GLITCH BEANIE</h3>
+            <p class="product-price">$38.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram / Social -->
+  <section class="section social-section">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">@ALTEREDSTATE</span>
+        <h2 class="section-title">JOIN THE MOVEMENT</h2>
+      </div>
+      <div class="social-grid">
+        <div class="social-item"><img src="https://design.canva.ai/6HpA5AIHIIlwcJ-" alt="Social 1" class="social-img"></div>
+        <div class="social-item"><img src="https://design.canva.ai/yHU9Gcs8Ez6yvUf" alt="Social 2" class="social-img"></div>
+        <div class="social-item"><img src="https://design.canva.ai/oUdJMJ3SBHiaM1f" alt="Social 3" class="social-img"></div>
+        <div class="social-item"><img src="https://design.canva.ai/0NJNd7gCU81WRAZ" alt="Social 4" class="social-img"></div>
+        <div class="social-item"><img src="https://design.canva.ai/S50B6j9g8paoIH0" alt="Social 5" class="social-img"></div>
+        <div class="social-item"><img src="https://design.canva.ai/H1q2yqAPFqZxiuR" alt="Social 6" class="social-img"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h2>STAY ALTERED</h2>
+          <p>Get early access to drops, exclusive offers, and updates straight to your inbox.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="YOUR EMAIL ADDRESS" required>
+          <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="about">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <img src="images/logo.png" alt="Altered State" class="footer-logo"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <span class="logo-text footer-logo-text" style="display:none;">ALTERED STATE</span>
+          <p>Premium streetwear for those who refuse to conform. Designed with intention, built to last.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter/X">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.69a8.16 8.16 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>SHOP</h4>
+          <ul>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Essentials</a></li>
+            <li><a href="#">Outerwear</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>INFO</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ALTERED STATE. ALL RIGHTS RESERVED.</p>
+        <div class="payment-icons">
+          <span>VISA</span>
+          <span>MC</span>
+          <span>AMEX</span>
+          <span>PAYPAL</span>
+          <span>APPLEPAY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
