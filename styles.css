@@ -166,7 +166,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  height: 70px;
+  height: 85px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -177,7 +177,7 @@ ul {
 }
 
 .logo-img {
-  height: 55px;
+  height: 70px;
   width: auto;
 }
 
@@ -506,8 +506,7 @@ ul {
 }
 
 .mobile-logo {
-  height: 36px;
-  /* logo displays as-is on dark background */
+  height: 55px;
 }
 
 .mobile-nav-close {
@@ -1167,8 +1166,7 @@ ul {
 }
 
 .footer-logo {
-  height: 40px;
-  /* logo displays as-is on dark background */
+  height: 60px;
   margin-bottom: 16px;
 }
 
@@ -1291,7 +1289,7 @@ ul {
   }
 
   .header-inner {
-    height: 80px;
+    height: 90px;
   }
 
   .product-grid {
